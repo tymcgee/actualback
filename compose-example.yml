@@ -1,0 +1,18 @@
+services:
+  actual_backup:
+    image: actual-backup
+    build: .
+    container_name: actualbudget_backup
+    restart: unless-stopped
+    environment:
+      # required
+      - ACTUAL_SERVER_URL=https://192.168.1.25:5006/
+      - ACTUAL_PASSWORD=password
+      - ACTUAL_SYNC_ID=uuid
+      # optional. note that ./data here refers to /app/data in the container
+      # - ACTUAL_DATA_DIR=./data/budgets
+      # - ACTUAL_OUTPUT_DIR=./data/backups
+      # - ACTUAL_CRON_TIME=0 0 * * *
+      # - TZ=America/Los_Angeles
+    volumes:
+      - ./data:/app/data

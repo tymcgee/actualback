@@ -1,0 +1,26 @@
+{
+  "name": "actual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node index.js"
+  },
+    "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.x",
+      "onFail": "download"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actual-app/api": "^26.10.0",
+    "cron": "^4.4.0",
+    "date-fns": "^4.4.0",
+    "dotenv": "^18.0.9"
+  }
+}
