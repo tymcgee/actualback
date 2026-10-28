@@ -29,3 +29,6 @@ Then start:
 ```bash
 pnpm start
 ```
+
+# See Also
+- [actualbudget-backup](https://github.com/rodriguestiago0/actualbudget-backup) - a similar project with a larger scope
